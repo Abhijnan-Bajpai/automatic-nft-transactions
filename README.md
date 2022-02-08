@@ -1,6 +1,8 @@
-# Basic Sample Hardhat Project
+# Automatic Customised NFT Transactions 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project is a work in progress towards becoming an extension for helping deliver custom NFTs for multiple use cases. It requires a base image which has some whitespace around the original design, and a CSV file which contains the fields: first name and wallet public key. The code will customize the image with a title and names of people who will be getting the NFT.
+
+A use case could be giving out customized NFTs as a souvenir to every member of a public event!
 
 Try running some of the following tasks:
 
