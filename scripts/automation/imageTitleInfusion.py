@@ -7,7 +7,8 @@ class ImageTitleInfusion:
         self.width, self.height = self.my_image.size
         self.image_editable = ImageDraw.Draw(self.my_image)
         self.title_font = ImageFont.truetype('../../fonts/BLANKA Font/Blanka-Regular.otf', 180)
-        self.title_text = "NEWOLF"
+        # Customise your title here
+        self.title_text = "TITLE"
 
     def getPositions(self, xfrac, yfrac):
         x = (self.width - self.w)*xfrac
