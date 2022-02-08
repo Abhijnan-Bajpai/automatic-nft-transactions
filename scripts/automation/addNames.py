@@ -13,7 +13,7 @@ CLIENT_ID = os.getenv('CLIENT-ID')
 urlIMGUR = "https://api.imgur.com/3/image"
 urlJSON = 'https://extendsclass.com/api/json-storage/bin/'
 
-# Change this for changing the main design
+# Tweak this for changing the main design
 # TODO: Add your own image which you want to be customised as an NFT here
 currentNFT = "../../img/blockchain.jpg"
 name = sys.argv[1]
