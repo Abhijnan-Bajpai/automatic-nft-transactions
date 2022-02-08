@@ -1,0 +1,3 @@
+Pink to Red: my_image.putpixel((i, j), (i*(height-j)//(3*i), i//(j*i), (width-i)*j//(3*j)))
+Black to Blue: my_image.putpixel((i, j), (i*j//(3*i), i//(j*i), i*j//(3*j)))
+Black to Red: my_image.putpixel((i, j), (i//3, j//3, j//3))

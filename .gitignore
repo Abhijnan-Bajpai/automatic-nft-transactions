@@ -1,0 +1,14 @@
+node_modules
+scripts/Automation/.env
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
+hardhat.config.js
+scripts/automation/.env
+img/blockchain.jpg
+img/final.png
+img/result.jpg
