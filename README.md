@@ -4,6 +4,8 @@ This project is a work in progress towards becoming an extension for helping del
 
 A use case could be giving out customized NFTs as a souvenir to every member of a public event!
 
+Add the base image design into the img folder
+
 Try running some of the following tasks:
 
 ```shell
