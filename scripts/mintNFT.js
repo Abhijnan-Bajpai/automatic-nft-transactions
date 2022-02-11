@@ -25,7 +25,7 @@ async function mintNFT(tokenURI, receiverPublicKey) {
       from: PUBLIC_KEY,
       to: contractAddress,
       nonce: txCount,
-      gas: 500000,
+      gas: 700000,
       data: nftContract.methods.makeAnEpicNFT(tokenURI, PUBLIC_KEY).encodeABI(),
     }
   

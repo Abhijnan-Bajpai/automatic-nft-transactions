@@ -3,8 +3,8 @@ import csv
 import time
 import os
 
-# os.system("npx hardhat run deploy.js --network rinkeby")
-# time.sleep(13)
+os.system("npx hardhat run deploy.js --network rinkeby")
+time.sleep(13)
 
 rows = []
 with open("./addresses.csv", 'r') as file:

@@ -23,7 +23,7 @@ async function sendNft(receiver_address, token_id) {
       from: PUBLIC_KEY,
       to: contractAddress,
       nonce: txCount,
-      gas: 500000,
+      gas: 700000,
       data: nftContract.methods.safeTransferFrom(PUBLIC_KEY, receiver_address, token_id).encodeABI(),
     }
   
