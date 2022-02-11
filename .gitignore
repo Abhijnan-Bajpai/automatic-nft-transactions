@@ -1,5 +1,4 @@
 node_modules
-scripts/Automation/.env
 coverage
 coverage.json
 typechain
@@ -8,7 +7,7 @@ typechain
 cache
 artifacts
 hardhat.config.js
-scripts/automation/.env
 img/blockchain.jpg
 img/final.png
 img/result.jpg
+scripts/.env

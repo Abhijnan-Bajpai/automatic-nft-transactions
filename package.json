@@ -23,6 +23,8 @@
     "@alch/alchemy-web3": "^1.2.2",
     "@openzeppelin/contracts": "^4.4.2",
     "axios": "^0.25.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "envfile": "^6.17.0",
+    "find-config": "^1.0.0"
   }
 }
