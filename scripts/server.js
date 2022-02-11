@@ -1,8 +1,9 @@
 require("dotenv").config()
-const pinJSONToIPFS = require('./jsonToIPFS.js')
+const { pinJSONToIPFS } = require('./jsonToIPFS.js')
 const {spawn} = require('child_process');
 const apiKey = process.env.PINATA_API_KEY
 const secretKey = process.env.PINATA_API_SECRET
+console.log(apiKey)
 const express = require('express')
 const app = express()
 const port = 3000

@@ -1,9 +1,13 @@
 import requests
 import csv
 import time
+import os
+
+# os.system("npx hardhat run deploy.js --network rinkeby")
+# time.sleep(13)
 
 rows = []
-with open("addresses.csv", 'r') as file:
+with open("./addresses.csv", 'r') as file:
     csvreader = csv.reader(file)
     header = next(csvreader)
     for row in csvreader:
@@ -18,4 +22,4 @@ for i in rows:
     r = requests.get(url=URL, headers=PARAMS)
     print(r.text)
     print(i[1])
-    time.sleep(20)
+    time.sleep(30)

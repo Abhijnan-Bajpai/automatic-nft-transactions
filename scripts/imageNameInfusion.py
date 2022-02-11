@@ -4,7 +4,7 @@ class ImageNameInfusion:
     def __init__(self, name, imgPath):
         self.name_text = name
         self.imgPath = imgPath
-        self.name_font = ImageFont.truetype('../../fonts/Free-Saint-George-Stencil-Font/SaintGeorge-LowercaseStencil.otf', 160)
+        self.name_font = ImageFont.truetype('../fonts/Free-Saint-George-Stencil-Font/SaintGeorge-LowercaseStencil.otf', 160)
 
 
     def initialiseImage(self):
@@ -27,4 +27,4 @@ class ImageNameInfusion:
         self.publishImage()
 
     def publishImage(self):
-        self.my_image.save("../../img/final.png")
+        self.my_image.save("../img/final.png")

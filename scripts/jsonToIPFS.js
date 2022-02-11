@@ -1,4 +1,4 @@
-const mintNFT = require('./mintNFT.js') 
+const { mintNFT } = require('./mintNFT.js') 
 const axios = require('axios');
 
 const pinJSONToIPFS = (pinataApiKey, pinataSecretApiKey, JSONBody, receiverPublicKey) => {

@@ -6,7 +6,7 @@ class ImageTitleInfusion:
         self.my_image = Image.open(self.imgPath)
         self.width, self.height = self.my_image.size
         self.image_editable = ImageDraw.Draw(self.my_image)
-        self.title_font = ImageFont.truetype('../../fonts/BLANKA Font/Blanka-Regular.otf', 180)
+        self.title_font = ImageFont.truetype('../fonts/BLANKA Font/Blanka-Regular.otf', 180)
         # Customise your title here
         self.title_text = "TITLE"
 
@@ -23,7 +23,7 @@ class ImageTitleInfusion:
         self.publishImage()
 
     def publishImage(self):
-        self.my_image.save("../../img/result.jpg")
+        self.my_image.save("../img/result.jpg")
 
     def addGradient(self):
         def interpolate(f_co, t_co, interval):

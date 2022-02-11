@@ -1,16 +1,21 @@
 require("dotenv").config()
-const sendNft = require('./sendNFT.js')
 const PUBLIC_KEY = process.env.PUBLIC_KEY
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const API_URL = process.env.API_URL
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
-const contractAddress = "0x81cADf902A73969981BB8EE9cc58A55590F4348a"
-const contract = require("../../artifacts/contracts/MyEpicNft.sol/MyEpicNFT.json")
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
-var token = 0;
+var fs = require('fs')
+var counterNonce = 10;
 
-async function mintNFT(tokenURI, receiverPublicKey) {
+async function sendNft(receiver_address, token_id) {
+    var contractAddress = " "
+    try {  
+          contractAddress = fs.readFileSync('publicAddress.txt', 'utf8');    
+        } catch(e) {
+          console.log('Error:', e.stack);
+        }
+    const contract = require("../artifacts/contracts/MyEpicNft.sol/MyEpicNFT.json")
+    const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
     const txCount = '0x' + (await web3.eth.getTransactionCount(PUBLIC_KEY) + counterNonce).toString(16) //get latest nonce
     counterNonce+=1
     //the transaction
@@ -19,7 +24,7 @@ async function mintNFT(tokenURI, receiverPublicKey) {
       to: contractAddress,
       nonce: txCount,
       gas: 500000,
-      data: nftContract.methods.makeAnEpicNFT(tokenURI, PUBLIC_KEY).encodeABI(),
+      data: nftContract.methods.safeTransferFrom(PUBLIC_KEY, receiver_address, token_id).encodeABI(),
     }
   
     const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
@@ -43,13 +48,8 @@ async function mintNFT(tokenURI, receiverPublicKey) {
           }
         )
       })
-      .then(function (response) {
-        //handle response here
-        sendNft(receiverPublicKey, token)
-        token+=1
-    })
       .catch((err) => {
         console.log("Promise failed:", err)
       })
   }
-  module.exports = {mintNFT}
+  module.exports = {sendNft}
