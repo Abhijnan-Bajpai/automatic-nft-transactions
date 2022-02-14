@@ -52,7 +52,7 @@ async function mintNFT(tokenURI, receiverPublicKey) {
       })
       .then(async function (response) {
         //handle response here
-        await new Promise(resolve => setTimeout(resolve, 20000));
+        await new Promise(resolve => setTimeout(resolve, 25000));
         sendNft(receiverPublicKey, token)
         token+=1
     })

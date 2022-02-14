@@ -22,4 +22,4 @@ for i in rows:
     r = requests.get(url=URL, headers=PARAMS)
     print(r.text)
     print(i[1])
-    time.sleep(30)
+    time.sleep(35)
